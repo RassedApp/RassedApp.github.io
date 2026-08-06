@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, Crown, Sparkles, Shield, ArrowRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 const pricing = [
   {

@@ -76,7 +76,7 @@ export default function Screenshots() {
                                 {ss.label}
                               </p>
                               <div className="space-y-2 mt-4 flex flex-col items-center">
-                                {ss.features.map((f, idx) => (
+                                {ss.features.map((_, idx) => (
                                   <div key={idx} className="h-2 w-20 rounded-full bg-primary-200" />
                                 ))}
                               </div>

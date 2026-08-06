@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, Smartphone, Zap, Shield, CheckCircle, Users, Star } from 'lucide-react'
+import { Download, Zap, ArrowRight } from 'lucide-react'
 import Link from './Link'
 
 interface HeroProps {
@@ -101,7 +101,7 @@ export default function Hero({ apkLink }: HeroProps) {
                 Download Android APK
               </button>
             </a>
-            <Link href="#pricing" className="btn-secondary w-full sm:w-auto">
+            <Link to="#pricing" className="btn-secondary w-full sm:w-auto">
               View Pricing
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

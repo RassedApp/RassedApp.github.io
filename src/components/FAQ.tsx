@@ -1,7 +1,7 @@
 'use client'
 
-import { motion, useState } from 'react'
-import { motion as motionDiv } from 'framer-motion'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
 
 const faqs = [
@@ -48,7 +48,7 @@ interface FAQItemProps {
 
 function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
   return (
-    <motionDiv
+    <motion.div
       className="rounded-xl border border-gray-200 bg-white overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
           {faq.answer}
         </div>
       </motion.div>
-    </motionDiv>
+    </motion.div>
   )
 }
 
@@ -106,7 +106,7 @@ export default function FAQ() {
           </p>
         </motion.div>
 
-        <motionDiv
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -122,7 +122,7 @@ export default function FAQ() {
               onToggle={() => toggleFAQ(i)}
             />
           ))}
-        </motionDiv>
+        </motion.div>
       </div>
     </section>
   )

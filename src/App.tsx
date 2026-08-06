@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-import { ArrowRight, Download, Smartphone, CheckCircle, Zap, Shield, Globe, BarChart3, FileText, Wifi, Sim, RotateCcw, Clock, Star, MessageCircle, Send, Mail, Menu, X, ChevronDown, ChevronUp } from 'lucide-react'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'

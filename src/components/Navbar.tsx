@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Smartphone, Zap, Download, X, Menu, ChevronDown, ChevronUp } from 'lucide-react'
+import { Smartphone, Download, X, Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 interface NavbarProps {

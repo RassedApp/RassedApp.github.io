@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Heart, Mail, MessageCircle, Send, Smartphone, Zap, Shield, Globe } from 'lucide-react'
+import { Heart, Mail, MessageCircle, Send, Smartphone } from 'lucide-react'
 import Link from './Link'
 
 export default function Footer() {

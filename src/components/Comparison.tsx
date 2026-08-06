@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, Shield, CheckCircle, Clock, Globe, BarChart3, XCircle } from 'lucide-react'
+import { Zap, Shield, CheckCircle, Globe, BarChart3, XCircle } from 'lucide-react'
 
 const comparisonItems = [
   { label: 'Transfer Speed', manual: '5-15 minutes', app: 'Under 10 seconds', icon: Zap, winner: 'app' },

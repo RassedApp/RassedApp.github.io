@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, CheckCircle, Rocket, ArrowRight } from 'lucide-react'
+import { Download, CheckCircle, Rocket } from 'lucide-react'
 import Link from './Link'
 
 const steps = [
@@ -75,7 +75,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link href="#pricing" className="btn-primary">
+          <Link to="#pricing" className="btn-primary">
             Get Started Now
           </Link>
         </motion.div>

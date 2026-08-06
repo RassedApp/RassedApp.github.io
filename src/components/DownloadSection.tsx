@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, Smartphone, ArrowRight, Shield, Check } from 'lucide-react'
+import { Download, Smartphone, ArrowRight, Check } from 'lucide-react'
 
 interface DownloadSectionProps {
   apkLink: string
