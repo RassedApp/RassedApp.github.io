@@ -1,0 +1,41 @@
+{
+  "name": "quick-ussd-website",
+  "version": "1.0.0",
+  "description": "Premium marketing website for Quick USSD Dial - The Fastest & Smartest USSD Transfer App for Syriatel and MTN Syria",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "keywords": [
+    "ussd",
+    "balance-transfer",
+    "syria",
+    "mtn",
+    "syriatel",
+    "marketing",
+    "landing-page"
+  ],
+  "author": "Blue Orbit Technologies",
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.462.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.49.2",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.19"
+  }
+}
