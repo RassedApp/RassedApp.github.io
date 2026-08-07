@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Download, Smartphone, ArrowRight, Check } from 'lucide-react'
 import { useConfig } from '../config/ConfigContext'
 
@@ -9,9 +10,9 @@ interface DownloadSectionProps {
 }
 
 export default function DownloadSection({ apkLink }: DownloadSectionProps) {
+  const { t } = useTranslation()
   const config = useConfig()
   const features = config.download.features
-
   return (
     <section id="download" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-emerald-50">
       <div className="absolute inset-0 overflow-hidden">
@@ -37,17 +38,17 @@ export default function DownloadSection({ apkLink }: DownloadSectionProps) {
           </div>
 
           <h2 className="section-title mb-4">
-            Ready to Get Started?
+            {t('download.title')}
           </h2>
           <p className="section-subtitle mx-auto mb-10">
-            Download Quick USSD Dial now and experience the fastest balance transfer on your phone.
+            {t('download.subtitle')}
           </p>
 
           <a href={apkLink} target="_blank" rel="noopener noreferrer">
             <button className="btn-primary group">
-              <Download className="w-6 h-6 mr-3" />
-              Download Android APK
-              <ArrowRight className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-1" />
+              <Download className="w-6 h-6 me-3" />
+              {t('download.downloadApk')}
+              <ArrowRight className="w-6 h-6 ms-3 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
             </button>
           </a>
 
@@ -62,7 +63,7 @@ export default function DownloadSection({ apkLink }: DownloadSectionProps) {
                 transition={{ duration: 0.3, delay: 0.5 + i * 0.05 }}
               >
                 <Check className="w-4 h-4 text-primary-600 shrink-0" />
-                <span>{feature}</span>
+                <span>{t(feature)}</span>
               </motion.div>
             ))}
           </div>

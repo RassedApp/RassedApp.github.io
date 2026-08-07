@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Smartphone, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { screenshots as uploadedScreenshots } from '../lib/media'
 
 const placeholderScreenshots = [
@@ -46,7 +47,9 @@ const screenshots: Slide[] =
     : placeholderScreenshots
 
 export default function Screenshots() {
+  const { t, i18n } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const isRtl = i18n.language === 'ar'
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % screenshots.length)
   const prev = () => setCurrentIndex((prev) => (prev - 1 + screenshots.length) % screenshots.length)
@@ -61,9 +64,9 @@ export default function Screenshots() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">See It in Action</h2>
+          <h2 className="section-title">{t('screenshots.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Beautiful, intuitive interface designed for speed and ease of use
+            {t('screenshots.subtitle')}
           </p>
         </motion.div>
 
@@ -72,7 +75,7 @@ export default function Screenshots() {
             <div className="overflow-hidden">
               <motion.div
                 className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                style={{ transform: `translateX(${isRtl ? currentIndex * 100 : -currentIndex * 100}%)` }}
               >
                 {screenshots.map((ss, i) => (
                   <div key={i} className="w-full flex-shrink-0 px-4">
@@ -100,7 +103,7 @@ export default function Screenshots() {
                                   <Smartphone className="w-8 h-8 text-primary-600" />
                                 </div>
                                 <p className="text-sm font-medium text-gray-800">
-                                  {ss.label}
+                                  {t(ss.label)}
                                 </p>
                                 <div className="space-y-2 mt-4 flex flex-col items-center">
                                   {ss.features.map((_, idx) => (
@@ -115,7 +118,7 @@ export default function Screenshots() {
                         </div>
                       </div>
                       <p className="text-center text-sm text-gray-500 mt-4">
-                        {ss.label}
+                        {t(ss.label)}
                       </p>
                     </motion.div>
                   </div>
@@ -128,9 +131,9 @@ export default function Screenshots() {
             <button
               onClick={prev}
               className="p-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-              aria-label="Previous screenshot"
+              aria-label={t('screenshots.prev')}
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600" />
+              <ChevronLeft className="w-5 h-5 text-gray-600 rtl:rotate-180" />
             </button>
             <div className="flex items-center gap-2">
               {screenshots.map((_, i) => (
@@ -142,16 +145,16 @@ export default function Screenshots() {
                       ? 'bg-primary-600 w-8'
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
-                  aria-label={`Go to screenshot ${i + 1}`}
+                  aria-label={t('screenshots.goTo', { n: i + 1 })}
                 />
               ))}
             </div>
             <button
               onClick={next}
               className="p-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-              aria-label="Next screenshot"
+              aria-label={t('screenshots.next')}
             >
-              <ChevronRight className="w-5 h-5 text-gray-600" />
+              <ChevronRight className="w-5 h-5 text-gray-600 rtl:rotate-180" />
             </button>
           </div>
         </div>

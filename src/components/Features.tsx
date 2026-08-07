@@ -1,92 +1,27 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Smartphone, Wifi, Cpu, RotateCcw, Shield, Zap, BarChart3, FileText, Globe, Cloud, LayoutGrid, Clock, CheckCircle } from 'lucide-react'
 
-const features = [
-  {
-    icon: Smartphone,
-    title: 'One Click Transfer',
-    description: 'Transfer balance with a single tap. Fast, simple, and reliable.',
-  },
-  {
-    icon: Cpu,
-    title: 'Syriatel Support',
-    description: 'Full support for Syriatel network balance transfers.',
-  },
-  {
-    icon: Wifi,
-    title: 'MTN Support',
-    description: 'Seamless balance transfer for MTN network users.',
-  },
-  {
-    icon: RotateCcw,
-    title: 'Smart Operator Detection',
-    description: 'Automatically detects the operator and optimizes the transfer.',
-  },
-  {
-    icon: Cpu,
-    title: 'Dual SIM Support',
-    description: 'Works perfectly with dual SIM devices.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Automatic SIM Selection',
-    description: 'Intelligently selects the right SIM for each transfer.',
-  },
-  {
-    icon: CheckCircle,
-    title: 'Balance Inquiry',
-    description: 'Check your balance instantly with USSD codes.',
-  },
-  {
-    icon: Wifi,
-    title: 'Offline Operation',
-    description: 'Works even without internet for balance inquiries.',
-  },
-  {
-    icon: FileText,
-    title: 'Detailed Reports',
-    description: 'Comprehensive transfer history and transaction reports.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Statistics Dashboard',
-    description: 'Track your transfer activity with beautiful statistics.',
-  },
-  {
-    icon: Shield,
-    title: 'Secure License System',
-    description: 'Enterprise-grade security for your license and data.',
-  },
-  {
-    icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Optimized for speed with minimal latency.',
-  },
-  {
-    icon: Globe,
-    title: 'Arabic & English',
-    description: 'Full bilingual support for Arabic and English.',
-  },
-  {
-    icon: LayoutGrid,
-    title: 'Modern UI/UX',
-    description: 'Clean, intuitive, and beautiful interface design.',
-  },
-  {
-    icon: Cloud,
-    title: 'Auto Backup',
-    description: 'Your data is automatically backed up and safe.',
-  },
-  {
-    icon: Clock,
-    title: '24/7 Availability',
-    description: 'Transfer balance anytime, anywhere.',
-  },
+const featureIcons = [
+  Smartphone, Cpu, Wifi, RotateCcw, Cpu, Smartphone, CheckCircle, Wifi,
+  FileText, BarChart3, Shield, Zap, Globe, LayoutGrid, Cloud, Clock,
 ]
 
+interface FeatureItem {
+  title: string
+  description: string
+}
+
 export default function Features() {
+  const { t } = useTranslation()
+  const items = t('features.items', { returnObjects: true }) as FeatureItem[]
+  const features = items.map((item, i) => ({
+    icon: featureIcons[i] ?? Smartphone,
+    title: item.title,
+    description: item.description,
+  }))
   return (
     <section id="features" className="py-20 sm:py-24 lg:py-32 bg-white">
       <div className="container-custom">
@@ -97,9 +32,9 @@ export default function Features() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Powerful Features</h2>
+          <h2 className="section-title">{t('features.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Everything you need for quick, secure, and reliable balance transfers
+            {t('features.subtitle')}
           </p>
         </motion.div>
 

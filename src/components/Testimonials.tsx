@@ -1,36 +1,19 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Star, Quote } from 'lucide-react'
 
-const testimonials = [
-  {
-    name: 'Ahmed Al-Hassan',
-    role: 'MTN User',
-    text: 'Quick USSD Dial is a game changer. Transferring balance takes seconds now instead of minutes. The interface is clean and easy to use.',
-    rating: 5,
-  },
-  {
-    name: 'Sara Mahmoud',
-    role: 'Syriatel User',
-    text: 'I\'ve been using this app for over a year. The dual SIM support is amazing and the automatic operator detection works perfectly every time.',
-    rating: 5,
-  },
-  {
-    name: 'Omar Khalil',
-    role: 'Business Owner',
-    text: 'We use Quick USSD Dial for our team. The license system is secure and the reports feature helps us track all transfers efficiently.',
-    rating: 5,
-  },
-  {
-    name: 'Layla Haddad',
-    role: 'Daily User',
-    text: 'The offline mode is a lifesaver. I can check my balance even without internet. Best balance transfer app available.',
-    rating: 5,
-  },
-]
+interface TestimonialItem {
+  name: string
+  role: string
+  text: string
+}
 
 export default function Testimonials() {
+  const { t } = useTranslation()
+  const items = t('testimonials.items', { returnObjects: true }) as TestimonialItem[]
+  const testimonials = items.map((item) => ({ ...item, rating: 5 }))
   return (
     <section className="py-20 sm:py-24 lg:py-32 bg-gray-50">
       <div className="container-custom">
@@ -41,9 +24,9 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">What Our Users Say</h2>
+          <h2 className="section-title">{t('testimonials.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Trusted by thousands of users across Syria
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 

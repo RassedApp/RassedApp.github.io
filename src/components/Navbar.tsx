@@ -3,20 +3,22 @@
 import { motion } from 'framer-motion'
 import { Smartphone, Download, X, Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 interface NavbarProps {
   apkLink: string
 }
 
-const links = [
-  { label: 'Features', href: '#features' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Screenshots', href: '#screenshots' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
-]
-
 export default function Navbar({ apkLink }: NavbarProps) {
+  const { t } = useTranslation()
+  const links = [
+    { label: t('nav.features'), href: '#features' },
+    { label: t('nav.howItWorks'), href: '#how-it-works' },
+    { label: t('nav.screenshots'), href: '#screenshots' },
+    { label: t('nav.pricing'), href: '#pricing' },
+    { label: t('nav.faq'), href: '#faq' },
+  ]
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -46,11 +48,11 @@ export default function Navbar({ apkLink }: NavbarProps) {
       transition={{ duration: 0.5 }}
     >
       <div className="container-custom h-16 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); scrollToSection('#'); }}>
+        <a href="/" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsOpen(false); }}>
           <div className="w-8 h-8 rounded-lg bg-primary-600 flex items-center justify-center">
             <Smartphone className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-gray-900 hidden sm:inline">Quick USSD Dial</span>
+          <span className="font-bold text-gray-900 hidden sm:inline">{t('nav.brand')}</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -64,10 +66,11 @@ export default function Navbar({ apkLink }: NavbarProps) {
               {link.label}
             </a>
           ))}
+          <LanguageSwitcher />
           <a href={apkLink} target="_blank" rel="noopener noreferrer">
             <button className="btn-primary">
-              <Download className="w-4 h-4 mr-2" />
-              Download
+              <Download className="w-4 h-4 me-2" />
+              {t('nav.download')}
             </button>
           </a>
         </div>
@@ -75,7 +78,7 @@ export default function Navbar({ apkLink }: NavbarProps) {
         <button
           className="md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          aria-label={t('nav.toggleMenu')}
         >
           {isOpen ? <X className="w-6 h-6 text-gray-900" /> : <Menu className="w-6 h-6 text-gray-900" />}
         </button>
@@ -100,10 +103,13 @@ export default function Navbar({ apkLink }: NavbarProps) {
                 {link.label}
               </a>
             ))}
+            <div className="py-2">
+              <LanguageSwitcher />
+            </div>
             <a href={apkLink} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
               <button className="btn-primary w-full">
-                <Download className="w-4 h-4 mr-2" />
-                Download APK
+                <Download className="w-4 h-4 me-2" />
+                {t('nav.downloadApk')}
               </button>
             </a>
           </div>

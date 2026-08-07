@@ -10,6 +10,12 @@
     @apply bg-white text-gray-900 antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
+  html[dir="rtl"] body {
+    letter-spacing: 0;
+  }
+  html[dir="rtl"] .tracking-tight {
+    letter-spacing: 0;
+  }
 }
 
 @layer components {

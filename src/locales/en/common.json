@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "title": "Quick USSD Dial - Transfer Balance in Seconds",
+    "description": "Quick USSD Dial - The Fastest & Smartest USSD Transfer App for Syriatel and MTN Syria. Transfer balance instantly with one click."
+  },
+  "nav": {
+    "brand": "Quick USSD Dial",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "screenshots": "Screenshots",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "download": "Download",
+    "downloadApk": "Download APK",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "Quick USSD Dial",
+    "title1": "Transfer Balance",
+    "title2": "in Seconds",
+    "subtitle": "The fastest and easiest way to transfer balance between MTN and Syriatel networks in Syria. One click, instant delivery, no hassle.",
+    "downloadApk": "Download Android APK",
+    "viewPricing": "View Pricing"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need for quick, secure, and reliable balance transfers",
+    "items": [
+      { "title": "One Click Transfer", "description": "Transfer balance with a single tap. Fast, simple, and reliable." },
+      { "title": "Syriatel Support", "description": "Full support for Syriatel network balance transfers." },
+      { "title": "MTN Support", "description": "Seamless balance transfer for MTN network users." },
+      { "title": "Smart Operator Detection", "description": "Automatically detects the operator and optimizes the transfer." },
+      { "title": "Dual SIM Support", "description": "Works perfectly with dual SIM devices." },
+      { "title": "Automatic SIM Selection", "description": "Intelligently selects the right SIM for each transfer." },
+      { "title": "Balance Inquiry", "description": "Check your balance instantly with USSD codes." },
+      { "title": "Offline Operation", "description": "Works even without internet for balance inquiries." },
+      { "title": "Detailed Reports", "description": "Comprehensive transfer history and transaction reports." },
+      { "title": "Statistics Dashboard", "description": "Track your transfer activity with beautiful statistics." },
+      { "title": "Secure License System", "description": "Enterprise-grade security for your license and data." },
+      { "title": "Lightning Fast", "description": "Optimized for speed with minimal latency." },
+      { "title": "Arabic & English", "description": "Full bilingual support for Arabic and English." },
+      { "title": "Modern UI/UX", "description": "Clean, intuitive, and beautiful interface design." },
+      { "title": "Auto Backup", "description": "Your data is automatically backed up and safe." },
+      { "title": "24/7 Availability", "description": "Transfer balance anytime, anywhere." }
+    ]
+  },
+  "how": {
+    "title": "How It Works",
+    "subtitle": "Get started in three simple steps",
+    "steps": [
+      { "title": "Download", "description": "Download Quick USSD Dial from the website or get the APK directly." },
+      { "title": "Activate", "description": "Purchase a license and activate your app. Simple and secure." },
+      { "title": "Start Using", "description": "Start transferring balance instantly with just one tap." }
+    ],
+    "cta": "Get Started Now"
+  },
+  "screenshots": {
+    "title": "See It in Action",
+    "subtitle": "Beautiful, intuitive interface designed for speed and ease of use",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "goTo": "Go to screenshot {{n}}"
+  },
+  "comparison": {
+    "title": "Why Quick USSD Dial?",
+    "subtitle": "Stop wasting time with manual transfers. Switch to the smarter way.",
+    "feature": "Feature",
+    "manual": "Manual Transfer",
+    "app": "Quick USSD Dial"
+  },
+  "pricing": {
+    "title": "Simple Pricing",
+    "subtitle": "Choose the plan that works for you. All plans include core features.",
+    "per": "per",
+    "mostPopular": "Most Popular",
+    "bestValue": "Best Value",
+    "getStarted": "Get Started",
+    "choosePlan": "Choose Plan"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Trusted by thousands of users across Syria",
+    "items": [
+      {
+        "name": "Ahmed Al-Hassan",
+        "role": "MTN User",
+        "text": "Quick USSD Dial is a game changer. Transferring balance takes seconds now instead of minutes. The interface is clean and easy to use."
+      },
+      {
+        "name": "Sara Mahmoud",
+        "role": "Syriatel User",
+        "text": "I've been using this app for over a year. The dual SIM support is amazing and the automatic operator detection works perfectly every time."
+      },
+      {
+        "name": "Omar Khalil",
+        "role": "Business Owner",
+        "text": "We use Quick USSD Dial for our team. The license system is secure and the reports feature helps us track all transfers efficiently."
+      },
+      {
+        "name": "Layla Haddad",
+        "role": "Daily User",
+        "text": "The offline mode is a lifesaver. I can check my balance even without internet. Best balance transfer app available."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Quick USSD Dial",
+    "items": [
+      {
+        "q": "How does Quick USSD Dial work?",
+        "a": "Quick USSD Dial uses USSD codes to transfer balance between mobile numbers on MTN and Syriatel networks. Simply enter the recipient number and amount, and the app handles the rest automatically."
+      },
+      {
+        "q": "Is it safe and secure?",
+        "a": "Yes, our app uses enterprise-grade security. Your license is protected, and all transactions are encrypted. We never store your personal data on our servers."
+      },
+      {
+        "q": "Can I use it on dual SIM phones?",
+        "a": "Absolutely! Quick USSD Dial fully supports dual SIM devices with automatic SIM selection, so you can transfer from either SIM card."
+      },
+      {
+        "q": "Do I need internet to use the app?",
+        "a": "Balance inquiries work offline via USSD codes. Transfers require a brief data connection to process the transaction, but the app works primarily through USSD."
+      },
+      {
+        "q": "What networks are supported?",
+        "a": "Quick USSD Dial supports both MTN and Syriatel networks in Syria. We plan to add more networks in future updates."
+      },
+      {
+        "q": "How do I activate my license?",
+        "a": "After purchasing a license, you will receive a license key via email. Enter the key in the app settings to activate your premium features."
+      },
+      {
+        "q": "Can I get a refund?",
+        "a": "We offer a 7-day money-back guarantee if you are not satisfied with the app. Contact our support team for assistance."
+      },
+      {
+        "q": "How often are updates released?",
+        "a": "We release updates regularly with new features, bug fixes, and performance improvements. All updates are free for license holders."
+      }
+    ]
+  },
+  "download": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Download Quick USSD Dial now and experience the fastest balance transfer on your phone.",
+    "downloadApk": "Download Android APK"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "description": "The fastest and easiest way to transfer balance between MTN and Syriatel networks. Built by {{company}}.",
+    "rights": "© {{year}} {{company}}. All rights reserved.",
+    "madeWith": "Made with",
+    "inSyria": "in Syria"
+  },
+  "Quick USSD Dial": "Quick USSD Dial",
+  "Downloads": "Downloads",
+  "Rating": "Rating",
+  "Support": "Support",
+  "Networks": "Networks",
+  "One Year": "One Year",
+  "Two Years": "Two Years",
+  "Three Years": "Three Years",
+  "year": "year",
+  "2 years": "2 years",
+  "3 years": "3 years",
+  "Technical Support": "Technical Support",
+  "All Updates": "All Updates",
+  "License for 1 Device": "License for 1 Device",
+  "All Features Included": "All Features Included",
+  "Save 16%": "Save 16%",
+  "Priority Support": "Priority Support",
+  "Save 37%": "Save 37%",
+  "Extended Warranty": "Extended Warranty",
+  "Manual Transfer": "Manual Transfer",
+  "Transfer Speed": "Transfer Speed",
+  "5-15 minutes": "5-15 minutes",
+  "Under 10 seconds": "Under 10 seconds",
+  "Ease of Use": "Ease of Use",
+  "Complex USSD codes": "Complex USSD codes",
+  "One tap transfer": "One tap transfer",
+  "Reliability": "Reliability",
+  "Often fails": "Often fails",
+  "99.9% success rate": "99.9% success rate",
+  "Offline Support": "Offline Support",
+  "No": "No",
+  "Yes (balance check)": "Yes (balance check)",
+  "Transaction History": "Transaction History",
+  "Full reports": "Full reports",
+  "Languages": "Languages",
+  "Arabic only": "Arabic only",
+  "Arabic & English": "Arabic & English",
+  "Dual SIM": "Dual SIM",
+  "Manual selection": "Manual selection",
+  "Auto selection": "Auto selection",
+  "24/7 priority": "24/7 priority",
+  "Memorize complex USSD codes for each network": "Memorize complex USSD codes for each network",
+  "Manual SIM switching on dual SIM devices": "Manual SIM switching on dual SIM devices",
+  "No transaction history or reports": "No transaction history or reports",
+  "Frequent failures and retries needed": "Frequent failures and retries needed",
+  "No customer support": "No customer support",
+  "Time-consuming process": "Time-consuming process",
+  "Free to download": "Free to download",
+  "Secure license system": "Secure license system",
+  "No hidden fees": "No hidden fees",
+  "24/7 support": "24/7 support",
+  "Regular updates": "Regular updates",
+  "Works offline": "Works offline",
+  "Features": "Features",
+  "Pricing": "Pricing",
+  "Download": "Download",
+  "FAQ": "FAQ",
+  "About": "About",
+  "Contact": "Contact",
+  "Privacy Policy": "Privacy Policy",
+  "Terms of Service": "Terms of Service",
+  "Help Center": "Help Center",
+  "Documentation": "Documentation",
+  "License": "License",
+  "Updates": "Updates",
+  "Email": "Email",
+  "WhatsApp": "WhatsApp",
+  "Telegram": "Telegram",
+  "Home Screen": "Home Screen",
+  "Transfer": "Transfer",
+  "Reports": "Reports",
+  "Settings": "Settings"
+}

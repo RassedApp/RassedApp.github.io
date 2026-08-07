@@ -1,10 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Check } from 'lucide-react'
 import { useConfig } from '../config/ConfigContext'
 
 export default function Pricing() {
+  const { t } = useTranslation()
   const config = useConfig()
   const pricing = config.pricing.plans
   return (
@@ -17,9 +19,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Simple Pricing</h2>
+          <h2 className="section-title">{t('pricing.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Choose the plan that works for you. All plans include core features.
+            {t('pricing.subtitle')}
           </p>
         </motion.div>
 
@@ -41,18 +43,18 @@ export default function Pricing() {
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary-600 text-white text-sm font-semibold">
-                  Most Popular
+                  {t('pricing.mostPopular')}
                 </div>
               )}
               {plan.bestValue && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-emerald-600 text-white text-sm font-semibold">
-                  Best Value
+                  {t('pricing.bestValue')}
                 </div>
               )}
 
               <div className="text-center mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {plan.name}
+                  {t(plan.name)}
                 </h3>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-4xl sm:text-5xl font-bold text-gray-900">
@@ -63,7 +65,7 @@ export default function Pricing() {
                   </span>
                 </div>
                 <p className="text-sm text-gray-500 mt-1">
-                  per {plan.period}
+                  {t('pricing.per')} {t(plan.period)}
                 </p>
               </div>
 
@@ -71,7 +73,7 @@ export default function Pricing() {
                 {plan.features.map((feature, j) => (
                   <li key={j} className="flex items-center gap-3 text-sm text-gray-600">
                     <Check className="w-4 h-4 text-primary-600 shrink-0" />
-                    <span>{feature}</span>
+                    <span>{t(feature)}</span>
                   </li>
                 ))}
               </ul>
@@ -83,7 +85,7 @@ export default function Pricing() {
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >
-                {plan.popular ? 'Get Started' : 'Choose Plan'}
+                {plan.popular ? t('pricing.getStarted') : t('pricing.choosePlan')}
               </button>
             </motion.div>
           ))}

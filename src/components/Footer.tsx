@@ -1,39 +1,41 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Heart, Mail, MessageCircle, Send, Smartphone } from 'lucide-react'
 import Link from './Link'
 import { useConfig } from '../config/ConfigContext'
 
 export default function Footer() {
+  const { t } = useTranslation()
   const config = useConfig()
   const app = config.app
 
   const footerLinks = {
     product: [
-      { label: 'Features', href: '#features' },
-      { label: 'Pricing', href: '#pricing' },
-      { label: 'Download', href: '#download' },
-      { label: 'FAQ', href: '#faq' },
+      { label: t('Features'), href: '#features' },
+      { label: t('Pricing'), href: '#pricing' },
+      { label: t('Download'), href: '#download' },
+      { label: t('FAQ'), href: '#faq' },
     ],
     company: [
-      { label: 'About', href: '#' },
-      { label: 'Contact', href: '#contact' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
+      { label: t('About'), href: '#' },
+      { label: t('Contact'), href: '#contact' },
+      { label: t('Privacy Policy'), href: '#' },
+      { label: t('Terms of Service'), href: '#' },
     ],
     support: [
-      { label: 'Help Center', href: '#' },
-      { label: 'Documentation', href: '#' },
-      { label: 'License', href: '#' },
-      { label: 'Updates', href: '#' },
+      { label: t('Help Center'), href: '#' },
+      { label: t('Documentation'), href: '#' },
+      { label: t('License'), href: '#' },
+      { label: t('Updates'), href: '#' },
     ],
   }
 
   const socialLinks = [
-    { icon: Mail, href: `mailto:${app.email}`, label: 'Email' },
-    { icon: MessageCircle, href: app.whatsapp, label: 'WhatsApp' },
-    { icon: Send, href: app.telegram, label: 'Telegram' },
+    { icon: Mail, href: `mailto:${app.email}`, label: t('Email') },
+    { icon: MessageCircle, href: app.whatsapp, label: t('WhatsApp') },
+    { icon: Send, href: app.telegram, label: t('Telegram') },
   ]
 
   return (
@@ -45,10 +47,10 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center">
                 <Smartphone className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">{app.name}</span>
+              <span className="text-xl font-bold text-gray-900">{t('nav.brand')}</span>
             </Link>
             <p className="text-gray-600 text-sm max-w-sm leading-relaxed mb-6">
-              The fastest and easiest way to transfer balance between MTN and Syriatel networks. Built by {app.company}.
+              {t('footer.description', { company: app.company })}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, i) => (
@@ -71,7 +73,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-            <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               {footerLinks.product.map((link, i) => (
                 <li key={i}>
@@ -84,7 +86,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-            <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               {footerLinks.company.map((link, i) => (
                 <li key={i}>
@@ -97,7 +99,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-            <h4 className="font-semibold text-gray-900 mb-4">Support</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">{t('footer.support')}</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               {footerLinks.support.map((link, i) => (
                 <li key={i}>
@@ -112,12 +114,12 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <motion.p className="text-xs text-gray-500" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            © {app.copyrightYear} {app.company}. All rights reserved.
+            {t('footer.rights', { year: app.copyrightYear, company: app.company })}
           </motion.p>
           <motion.p className="text-xs text-gray-500 flex items-center gap-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-            Made with
+            {t('footer.madeWith')}
             <Heart className="w-3 h-3 text-red-500 fill-red-500" />
-            in Syria
+            {t('footer.inSyria')}
           </motion.p>
         </div>
       </div>

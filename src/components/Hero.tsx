@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Download, Zap, ArrowRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import Link from './Link'
 import { useConfig } from '../config/ConfigContext'
 
@@ -10,6 +11,7 @@ interface HeroProps {
 }
 
 export default function Hero({ apkLink }: HeroProps) {
+  const { t } = useTranslation()
   const config = useConfig()
   const stats = config.hero.stats
 
@@ -60,7 +62,7 @@ export default function Hero({ apkLink }: HeroProps) {
           >
             <Zap className="w-4 h-4 text-primary-600" />
             <span className="text-sm font-medium text-primary-700">
-              Quick USSD Dial
+              {t('hero.badge')}
             </span>
           </motion.div>
 
@@ -70,10 +72,10 @@ export default function Hero({ apkLink }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           >
-            Transfer Balance
+            {t('hero.title1')}
             <br />
             <span className="bg-gradient-to-r from-primary-600 via-emerald-500 to-cyan-500 bg-clip-text text-transparent">
-              in Seconds
+              {t('hero.title2')}
             </span>
           </motion.h1>
 
@@ -83,7 +85,7 @@ export default function Hero({ apkLink }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
-            The fastest and easiest way to transfer balance between MTN and Syriatel networks in Syria. One click, instant delivery, no hassle.
+            {t('hero.subtitle')}
           </motion.p>
 
           <motion.div
@@ -94,13 +96,13 @@ export default function Hero({ apkLink }: HeroProps) {
           >
             <a href={apkLink} target="_blank" rel="noopener noreferrer">
               <button className="btn-primary group w-full sm:w-auto">
-                <Download className="w-5 h-5 mr-2" />
-                Download Android APK
+                <Download className="w-5 h-5 me-2" />
+                {t('hero.downloadApk')}
               </button>
             </a>
             <Link to="#pricing" className="btn-secondary w-full sm:w-auto">
-              View Pricing
-              <ArrowRight className="w-5 h-5 ml-2" />
+              {t('hero.viewPricing')}
+              <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
             </Link>
           </motion.div>
 
@@ -122,7 +124,7 @@ export default function Hero({ apkLink }: HeroProps) {
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-500 mt-1">
-                  {stat.label}
+                  {t(stat.label)}
                 </div>
               </motion.div>
             ))}

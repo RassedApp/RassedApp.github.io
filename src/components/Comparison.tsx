@@ -1,12 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Zap, Shield, CheckCircle, Globe, BarChart3, XCircle } from 'lucide-react'
 import { useConfig } from '../config/ConfigContext'
 
 const itemIcons = [Zap, Shield, Shield, Globe, BarChart3, Globe, Zap, Shield]
 
 export default function Comparison() {
+  const { t } = useTranslation()
   const config = useConfig()
   const comparisonItems = config.comparison.items.map((item, i) => ({
     ...item,
@@ -23,9 +25,9 @@ export default function Comparison() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Why Quick USSD Dial?</h2>
+          <h2 className="section-title">{t('comparison.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Stop wasting time with manual transfers. Switch to the smarter way.
+            {t('comparison.subtitle')}
           </p>
         </motion.div>
 
@@ -41,7 +43,7 @@ export default function Comparison() {
               <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
                 <XCircle className="w-6 h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">{config.comparison.manualTitle}</h3>
+              <h3 className="text-xl font-bold text-gray-900">{t(config.comparison.manualTitle)}</h3>
             </div>
             <ul className="space-y-4">
               {manualCons.map((con, i) => (
@@ -54,7 +56,7 @@ export default function Comparison() {
                   transition={{ duration: 0.3, delay: i * 0.05 }}
                 >
                   <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span>{con}</span>
+                  <span>{t(con)}</span>
                 </motion.li>
               ))}
             </ul>
@@ -71,7 +73,7 @@ export default function Comparison() {
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
                 <CheckCircle className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold">{config.comparison.appTitle}</h3>
+              <h3 className="text-xl font-bold">{t(config.comparison.appTitle)}</h3>
             </div>
             <ul className="space-y-4">
               {comparisonItems.map((item, i) => (
@@ -86,7 +88,7 @@ export default function Comparison() {
                   <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
                     <item.icon className="w-4 h-4" />
                   </div>
-                  <span>{item.app}</span>
+                  <span>{t(item.app)}</span>
                 </motion.li>
               ))}
             </ul>
@@ -97,9 +99,9 @@ export default function Comparison() {
           <table className="w-full max-w-5xl mx-auto">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-4 px-4 text-gray-500 font-medium">Feature</th>
-                <th className="text-center py-4 px-4 text-gray-500 font-medium">Manual Transfer</th>
-                <th className="text-center py-4 px-4 text-primary-600 font-medium">Quick USSD Dial</th>
+                <th className="text-start py-4 px-4 text-gray-500 font-medium">{t('comparison.feature')}</th>
+                <th className="text-center py-4 px-4 text-gray-500 font-medium">{t('comparison.manual')}</th>
+                <th className="text-center py-4 px-4 text-primary-600 font-medium">{t('comparison.app')}</th>
               </tr>
             </thead>
             <tbody>
@@ -114,14 +116,14 @@ export default function Comparison() {
                 >
                   <td className="py-4 px-4 font-medium flex items-center gap-2 text-gray-900">
                     <item.icon className="w-5 h-5 text-primary-600" />
-                    {item.label}
+                    {t(item.label)}
                   </td>
                   <td className="py-4 px-4 text-center text-gray-500">
-                    {item.manual}
+                    {t(item.manual)}
                   </td>
                   <td className="py-4 px-4 text-center">
                     <span className="inline-flex items-center gap-1 text-primary-600 font-semibold">
-                      {item.app}
+                      {t(item.app)}
                     </span>
                   </td>
                 </motion.tr>

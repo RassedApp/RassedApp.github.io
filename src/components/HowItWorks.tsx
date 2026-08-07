@@ -1,31 +1,26 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Download, CheckCircle, Rocket } from 'lucide-react'
 import Link from './Link'
 
-const steps = [
-  {
-    icon: Download,
-    number: '01',
-    title: 'Download',
-    description: 'Download Quick USSD Dial from the website or get the APK directly.',
-  },
-  {
-    icon: CheckCircle,
-    number: '02',
-    title: 'Activate',
-    description: 'Purchase a license and activate your app. Simple and secure.',
-  },
-  {
-    icon: Rocket,
-    number: '03',
-    title: 'Start Using',
-    description: 'Start transferring balance instantly with just one tap.',
-  },
-]
+const stepIcons = [Download, CheckCircle, Rocket]
+
+interface StepItem {
+  title: string
+  description: string
+}
 
 export default function HowItWorks() {
+  const { t } = useTranslation()
+  const stepItems = t('how.steps', { returnObjects: true }) as StepItem[]
+  const steps = stepItems.map((step, i) => ({
+    icon: stepIcons[i] ?? Download,
+    number: `0${i + 1}`,
+    title: step.title,
+    description: step.description,
+  }))
   return (
     <section id="how-it-works" className="py-20 sm:py-24 lg:py-32 bg-gray-50">
       <div className="container-custom">
@@ -36,9 +31,9 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">How It Works</h2>
+          <h2 className="section-title">{t('how.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Get started in three simple steps
+            {t('how.subtitle')}
           </p>
         </motion.div>
 
@@ -57,7 +52,7 @@ export default function HowItWorks() {
               >
                 <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-50 border-2 border-primary-100 mb-6 mx-auto">
                   <step.icon className="w-8 h-8 text-primary-600" />
-                  <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold flex items-center justify-center">
+                  <span className="absolute -top-2 -right-2 rtl:-left-2 rtl:right-auto w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold flex items-center justify-center">
                     {step.number}
                   </span>
                 </div>
@@ -76,7 +71,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Link to="#pricing" className="btn-primary">
-            Get Started Now
+            {t('how.cta')}
           </Link>
         </motion.div>
       </div>

@@ -2,45 +2,16 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
 
-const faqs = [
-  {
-    question: 'How does Quick USSD Dial work?',
-    answer: 'Quick USSD Dial uses USSD codes to transfer balance between mobile numbers on MTN and Syriatel networks. Simply enter the recipient number and amount, and the app handles the rest automatically.',
-  },
-  {
-    question: 'Is it safe and secure?',
-    answer: 'Yes, our app uses enterprise-grade security. Your license is protected, and all transactions are encrypted. We never store your personal data on our servers.',
-  },
-  {
-    question: 'Can I use it on dual SIM phones?',
-    answer: 'Absolutely! Quick USSD Dial fully supports dual SIM devices with automatic SIM selection, so you can transfer from either SIM card.',
-  },
-  {
-    question: 'Do I need internet to use the app?',
-    answer: 'Balance inquiries work offline via USSD codes. Transfers require a brief data connection to process the transaction, but the app works primarily through USSD.',
-  },
-  {
-    question: 'What networks are supported?',
-    answer: 'Quick USSD Dial supports both MTN and Syriatel networks in Syria. We plan to add more networks in future updates.',
-  },
-  {
-    question: 'How do I activate my license?',
-    answer: 'After purchasing a license, you will receive a license key via email. Enter the key in the app settings to activate your premium features.',
-  },
-  {
-    question: 'Can I get a refund?',
-    answer: 'We offer a 7-day money-back guarantee if you are not satisfied with the app. Contact our support team for assistance.',
-  },
-  {
-    question: 'How often are updates released?',
-    answer: 'We release updates regularly with new features, bug fixes, and performance improvements. All updates are free for license holders.',
-  },
-]
+interface FAQEntry {
+  q: string
+  a: string
+}
 
 interface FAQItemProps {
-  faq: typeof faqs[0]
+  faq: FAQEntry
   index: number
   isOpen: boolean
   onToggle: () => void
@@ -57,11 +28,11 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
     >
       <button
         onClick={onToggle}
-        className="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+        className="w-full px-6 py-5 text-start font-semibold text-gray-900 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
       >
         <span className="flex items-center gap-3">
           <HelpCircle className="w-5 h-5 text-primary-600 shrink-0" />
-          {faq.question}
+          {faq.q}
         </span>
         {isOpen ? (
           <ChevronUp className="w-5 h-5 text-gray-400" />
@@ -76,7 +47,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
         className="overflow-hidden"
       >
         <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100">
-          {faq.answer}
+          {faq.a}
         </div>
       </motion.div>
     </motion.div>
@@ -84,7 +55,10 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
 }
 
 export default function FAQ() {
+  const { t } = useTranslation()
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  const faqs = t('faq.items', { returnObjects: true }) as FAQEntry[]
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -100,9 +74,9 @@ export default function FAQ() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Frequently Asked Questions</h2>
+          <h2 className="section-title">{t('faq.title')}</h2>
           <p className="section-subtitle mx-auto">
-            Everything you need to know about Quick USSD Dial
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 
