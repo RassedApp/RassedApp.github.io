@@ -1,7 +1,7 @@
 {
   "name": "quick-ussd-website",
   "version": "1.0.0",
-  "description": "Premium marketing website for Quick USSD Dial - The Fastest & Smartest USSD Transfer App for Syriatel and MTN Syria",
+  "description": "Landing page for Raseed - balance transfer management for mobile phone shops in Syria",
   "type": "module",
   "scripts": {
     "dev": "vite",

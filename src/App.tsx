@@ -4,7 +4,9 @@ import HowItWorks from './components/HowItWorks'
 import Screenshots from './components/Screenshots'
 import Comparison from './components/Comparison'
 import Pricing from './components/Pricing'
-import Testimonials from './components/Testimonials'
+import WhyChoose from './components/WhyChoose'
+import BetterDay from './components/BetterDay'
+import TrustSection from './components/TrustSection'
 import FAQ from './components/FAQ'
 import DownloadSection from './components/DownloadSection'
 import Footer from './components/Footer'
@@ -28,7 +30,9 @@ function App() {
         <Screenshots />
         <Comparison />
         <Pricing />
-        <Testimonials />
+        <WhyChoose />
+        <BetterDay />
+        <TrustSection />
         <FAQ />
         <DownloadSection apkLink={apkLink} />
       </main>

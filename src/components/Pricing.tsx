@@ -56,6 +56,11 @@ export default function Pricing() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {t(plan.name)}
                 </h3>
+                {plan.description && (
+                  <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                    {t(plan.description)}
+                  </p>
+                )}
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-4xl sm:text-5xl font-bold text-gray-900">
                     {plan.price}

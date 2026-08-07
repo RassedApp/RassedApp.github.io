@@ -1,213 +1,244 @@
 {
   "meta": {
-    "title": "Quick USSD Dial - Transfer Balance in Seconds",
-    "description": "Quick USSD Dial - The Fastest & Smartest USSD Transfer App for Syriatel and MTN Syria. Transfer balance instantly with one click."
+    "title": "Raseed - Balance Transfer Management for Mobile Shops",
+    "description": "Raseed helps mobile phone shops, recharge stores, and payment points in Syria manage daily balance transfers — serve customers faster, reduce mistakes, and keep clear daily reports."
   },
   "nav": {
-    "brand": "Quick USSD Dial",
+    "brand": "Raseed",
     "features": "Features",
     "howItWorks": "How It Works",
     "screenshots": "Screenshots",
     "pricing": "Pricing",
     "faq": "FAQ",
     "download": "Download",
-    "downloadApk": "Download APK",
+    "downloadApk": "Download the App",
     "toggleMenu": "Toggle menu"
   },
   "hero": {
-    "badge": "Quick USSD Dial",
-    "title1": "Transfer Balance",
-    "title2": "in Seconds",
-    "subtitle": "The fastest and easiest way to transfer balance between MTN and Syriatel networks in Syria. One click, instant delivery, no hassle.",
-    "downloadApk": "Download Android APK",
-    "viewPricing": "View Pricing"
+    "badge": "Raseed",
+    "title1": "Serve Customers Faster,",
+    "title2": "Manage Transfers Professionally",
+    "subtitle": "Raseed is a balance transfer manager built for mobile phone shops, recharge stores, and payment points in Syria. Serve customers faster, cut down mistakes, and keep your whole day organized from one Android device.",
+    "downloadApk": "Download the App",
+    "viewPricing": "See Pricing"
   },
   "features": {
-    "title": "Powerful Features",
-    "subtitle": "Everything you need for quick, secure, and reliable balance transfers",
+    "title": "Features Built for Your Business",
+    "subtitle": "Every feature here saves you time and money in your daily work",
     "items": [
-      { "title": "One Click Transfer", "description": "Transfer balance with a single tap. Fast, simple, and reliable." },
-      { "title": "Syriatel Support", "description": "Full support for Syriatel network balance transfers." },
-      { "title": "MTN Support", "description": "Seamless balance transfer for MTN network users." },
-      { "title": "Smart Operator Detection", "description": "Automatically detects the operator and optimizes the transfer." },
-      { "title": "Dual SIM Support", "description": "Works perfectly with dual SIM devices." },
-      { "title": "Automatic SIM Selection", "description": "Intelligently selects the right SIM for each transfer." },
-      { "title": "Balance Inquiry", "description": "Check your balance instantly with USSD codes." },
-      { "title": "Offline Operation", "description": "Works even without internet for balance inquiries." },
-      { "title": "Detailed Reports", "description": "Comprehensive transfer history and transaction reports." },
-      { "title": "Statistics Dashboard", "description": "Track your transfer activity with beautiful statistics." },
-      { "title": "Secure License System", "description": "Enterprise-grade security for your license and data." },
-      { "title": "Lightning Fast", "description": "Optimized for speed with minimal latency." },
-      { "title": "Arabic & English", "description": "Full bilingual support for Arabic and English." },
-      { "title": "Modern UI/UX", "description": "Clean, intuitive, and beautiful interface design." },
-      { "title": "Auto Backup", "description": "Your data is automatically backed up and safe." },
-      { "title": "24/7 Availability", "description": "Transfer balance anytime, anywhere." }
+      { "title": "One-Tap Transfers", "description": "Send balance with one tap instead of typing USSD codes every single time." },
+      { "title": "Syriatel & MTN", "description": "Works with both major networks in Syria, so you never need more than one app." },
+      { "title": "Dual SIM Ready", "description": "Raseed picks the right SIM automatically on every transfer." },
+      { "title": "Automatic SIM Selection", "description": "No more manual SIM switching when customers hand you their phones." },
+      { "title": "Quick Balance Check", "description": "Check any balance in seconds, without hunting for codes." },
+      { "title": "Works Offline", "description": "After activation, the app works offline. No internet needed for daily transfers." },
+      { "title": "Daily Reports", "description": "See everything your shop transferred today in one clean report." },
+      { "title": "Transaction History", "description": "Keep a clear record of your work and find any transfer instantly." },
+      { "title": "Free Trial", "description": "Try Raseed free before you decide to buy a license." },
+      { "title": "Secure Activation", "description": "Request activation from inside the app — simple and safe." },
+      { "title": "Simple Arabic Interface", "description": "Built for daily use by shop staff. No learning curve." },
+      { "title": "Technical Support", "description": "Our team is here whenever you need help." },
+      { "title": "Continuous Updates", "description": "Raseed keeps improving with updates that matter to your work." },
+      { "title": "Fewer Mistakes", "description": "Stop losing money to mistyped numbers or the wrong SIM." },
+      { "title": "Professional Management", "description": "Run your shop like a business, not a notebook of codes." },
+      { "title": "Made for the Syrian Market", "description": "Built around how balance transfers really work in Syria." }
     ]
   },
   "how": {
     "title": "How It Works",
-    "subtitle": "Get started in three simple steps",
+    "subtitle": "Three steps to an easier working day",
     "steps": [
-      { "title": "Download", "description": "Download Quick USSD Dial from the website or get the APK directly." },
-      { "title": "Activate", "description": "Purchase a license and activate your app. Simple and secure." },
-      { "title": "Start Using", "description": "Start transferring balance instantly with just one tap." }
+      { "title": "Download the App", "description": "Download Raseed straight from this website onto the Android device in your shop." },
+      { "title": "Try It Free", "description": "Start right away with the free trial and test transfers and reports." },
+      { "title": "Request Activation", "description": "When you're ready to continue, send an activation request from inside the app and we'll get in touch." }
     ],
-    "cta": "Get Started Now"
+    "cta": "Get Started"
   },
   "screenshots": {
-    "title": "See It in Action",
-    "subtitle": "Beautiful, intuitive interface designed for speed and ease of use",
+    "title": "See Raseed in Action",
+    "subtitle": "A simple Arabic interface built for fast daily use in your shop",
     "prev": "Previous screenshot",
     "next": "Next screenshot",
     "goTo": "Go to screenshot {{n}}"
   },
   "comparison": {
-    "title": "Why Quick USSD Dial?",
-    "subtitle": "Stop wasting time with manual transfers. Switch to the smarter way.",
+    "title": "Manual Transfers vs. Raseed",
+    "subtitle": "See the difference in every step of your daily work",
     "feature": "Feature",
-    "manual": "Manual Transfer",
-    "app": "Quick USSD Dial"
+    "manual": "Manual Transfers",
+    "app": "Raseed"
   },
   "pricing": {
-    "title": "Simple Pricing",
-    "subtitle": "Choose the plan that works for you. All plans include core features.",
+    "title": "Simple, Clear Pricing",
+    "subtitle": "Choose the plan that fits your work. The free trial is always available before you buy.",
     "per": "per",
     "mostPopular": "Most Popular",
     "bestValue": "Best Value",
     "getStarted": "Get Started",
     "choosePlan": "Choose Plan"
   },
-  "testimonials": {
-    "title": "What Our Users Say",
-    "subtitle": "Trusted by thousands of users across Syria",
+  "whyChoose": {
+    "title": "Why Do Mobile Shops Choose Raseed?",
+    "subtitle": "Practical tools that make your working day faster, safer, and better organized",
     "items": [
-      {
-        "name": "Ahmed Al-Hassan",
-        "role": "MTN User",
-        "text": "Quick USSD Dial is a game changer. Transferring balance takes seconds now instead of minutes. The interface is clean and easy to use."
-      },
-      {
-        "name": "Sara Mahmoud",
-        "role": "Syriatel User",
-        "text": "I've been using this app for over a year. The dual SIM support is amazing and the automatic operator detection works perfectly every time."
-      },
-      {
-        "name": "Omar Khalil",
-        "role": "Business Owner",
-        "text": "We use Quick USSD Dial for our team. The license system is secure and the reports feature helps us track all transfers efficiently."
-      },
-      {
-        "name": "Layla Haddad",
-        "role": "Daily User",
-        "text": "The offline mode is a lifesaver. I can check my balance even without internet. Best balance transfer app available."
-      }
+      { "title": "Faster Customer Service", "description": "Complete the transfer in one tap while your customer waits." },
+      { "title": "Less Waiting Time", "description": "No more minutes per customer spent typing codes." },
+      { "title": "Fewer Transfer Mistakes", "description": "Cut down wrong numbers and wrong SIM mistakes." },
+      { "title": "Easier Balance Inquiry", "description": "Check any balance in seconds without hunting for codes." },
+      { "title": "Daily Reports", "description": "A clear record of every transfer by the end of the day." },
+      { "title": "Dual SIM Support", "description": "Automatic selection of the right SIM every time." },
+      { "title": "Offline After Activation", "description": "Use the app fully offline after activation." },
+      { "title": "Simple Arabic Interface", "description": "Built so your whole shop can use it without a learning curve." }
+    ]
+  },
+  "betterDay": {
+    "title": "A Better Working Day",
+    "p1": "It's peak hour and the shop can barely keep up. One customer needs a transfer, another asks for a balance check, and the phone won't stop ringing. In the middle of it all, you still have to type codes carefully, switch SIM cards, and hope nothing went wrong.",
+    "p2": "With Raseed, the transfer takes one tap. The right SIM is selected automatically. A balance check takes seconds. And at the end of the day, you have a clean report of everything you did — instead of a notebook and a headache.",
+    "closing": "You're not just moving balance anymore. You're running your shop."
+  },
+  "trustSection": {
+    "title": "Why Trust Raseed?",
+    "subtitle": "Clear, honest commitments — no empty numbers",
+    "items": [
+      { "title": "Free Trial", "description": "Try Raseed fully before paying anything." },
+      { "title": "Continuous Updates", "description": "We keep improving the app with what serves your work." },
+      { "title": "Technical Support", "description": "Our team is available whenever you need it." },
+      { "title": "Secure Activation", "description": "Request activation from inside the app and we contact you directly." },
+      { "title": "Offline After Activation", "description": "No internet needed for daily work after activation." },
+      { "title": "Made for the Syrian Market", "description": "Built around how transfers really work in Syria." }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Quick USSD Dial",
+    "subtitle": "Everything you need to know about Raseed",
     "items": [
       {
-        "q": "How does Quick USSD Dial work?",
-        "a": "Quick USSD Dial uses USSD codes to transfer balance between mobile numbers on MTN and Syriatel networks. Simply enter the recipient number and amount, and the app handles the rest automatically."
+        "q": "What is Raseed?",
+        "a": "Raseed is an Android app for managing daily balance transfers, built specifically for mobile phone shops, recharge stores, and payment points in Syria. It helps you transfer faster, with fewer mistakes, and a clear record of every transaction."
       },
       {
-        "q": "Is it safe and secure?",
-        "a": "Yes, our app uses enterprise-grade security. Your license is protected, and all transactions are encrypted. We never store your personal data on our servers."
+        "q": "Who is this app for?",
+        "a": "Mobile phone shops, recharge stores, balance transfer agents, payment points, and mobile service centers — anyone who makes a high volume of transfers every day and needs speed and organization."
       },
       {
-        "q": "Can I use it on dual SIM phones?",
-        "a": "Absolutely! Quick USSD Dial fully supports dual SIM devices with automatic SIM selection, so you can transfer from either SIM card."
+        "q": "Does it support Syriatel?",
+        "a": "Yes. Raseed fully supports Syriatel."
       },
       {
-        "q": "Do I need internet to use the app?",
-        "a": "Balance inquiries work offline via USSD codes. Transfers require a brief data connection to process the transaction, but the app works primarily through USSD."
+        "q": "Does it support MTN?",
+        "a": "Yes. Raseed fully supports MTN as well."
       },
       {
-        "q": "What networks are supported?",
-        "a": "Quick USSD Dial supports both MTN and Syriatel networks in Syria. We plan to add more networks in future updates."
+        "q": "Does it work with dual SIM phones?",
+        "a": "Yes. Raseed automatically selects the correct SIM on every transfer, so there's no manual switching."
       },
       {
-        "q": "How do I activate my license?",
-        "a": "After purchasing a license, you will receive a license key via email. Enter the key in the app settings to activate your premium features."
+        "q": "Does it work without internet?",
+        "a": "After activation, the app works completely offline. Internet is only required for activation and for optional online services if enabled."
       },
       {
-        "q": "Can I get a refund?",
-        "a": "We offer a 7-day money-back guarantee if you are not satisfied with the app. Contact our support team for assistance."
+        "q": "How does the free trial work?",
+        "a": "The app includes a free trial that lets you try every feature before buying any license. When the trial ends, you can request activation from inside the app."
       },
       {
-        "q": "How often are updates released?",
-        "a": "We release updates regularly with new features, bug fixes, and performance improvements. All updates are free for license holders."
+        "q": "How do I request activation?",
+        "a": "From inside the app: send an activation request and it goes directly to the admin."
+      },
+      {
+        "q": "How long does activation usually take?",
+        "a": "After you send your request, the admin contacts you using the phone number or email you entered in the app. Timing depends on how quickly we reach you."
+      },
+      {
+        "q": "Can I move my license to another device?",
+        "a": "A license is tied to one device. If you need to move it, contact us and we'll help."
+      },
+      {
+        "q": "Are updates included?",
+        "a": "Yes. All updates are included for the duration of your license at no extra cost."
+      },
+      {
+        "q": "Is technical support available?",
+        "a": "Yes. Our support team is available whenever you need help."
       }
     ]
   },
   "download": {
-    "title": "Ready to Get Started?",
-    "subtitle": "Download Quick USSD Dial now and experience the fastest balance transfer on your phone.",
-    "downloadApk": "Download Android APK"
+    "title": "Download Raseed and Try It Free",
+    "subtitle": "Judge Raseed yourself before buying any license. Download the app, try the free trial, and request activation from inside the app when you're ready.",
+    "downloadApk": "Download the App"
   },
   "footer": {
     "product": "Product",
     "company": "Company",
     "support": "Support",
-    "description": "The fastest and easiest way to transfer balance between MTN and Syriatel networks. Built by {{company}}.",
+    "description": "Raseed helps mobile phone shops in Syria transfer balance faster, with fewer mistakes and professional management. Built by {{company}}.",
     "rights": "© {{year}} {{company}}. All rights reserved.",
     "madeWith": "Made with",
     "inSyria": "in Syria"
   },
-  "Quick USSD Dial": "Quick USSD Dial",
-  "Downloads": "Downloads",
-  "Rating": "Rating",
+  "Raseed": "Raseed",
+  "Try it free": "Try it free",
+  "No payment required": "No payment required",
+  "Offline": "Offline",
+  "Works after activation": "Works after activation",
+  "Dual SIM": "Dual SIM",
+  "MTN & Syriatel": "MTN & Syriatel",
+  "Arabic UI": "Arabic UI",
+  "Simple and clear": "Simple and clear",
+  "Manual Transfers": "Manual Transfers",
+  "Typing USSD codes for every single transfer": "Typing USSD codes for every single transfer",
+  "Manually switching SIM cards all day long": "Manually switching SIM cards all day long",
+  "No record of your transactions": "No record of your transactions",
+  "Mistakes when entering numbers": "Mistakes when entering numbers",
+  "Losing time with every customer": "Losing time with every customer",
+  "Tiring work during rush hours": "Tiring work during rush hours",
+  "Transfer Speed": "Transfer Speed",
+  "Type code manually": "Type code manually",
+  "One-tap transfer": "One-tap transfer",
+  "SIM Selection": "SIM Selection",
+  "Manual switching": "Manual switching",
+  "Automatic": "Automatic",
+  "Balance Check": "Balance Check",
+  "Codes for each network": "Codes for each network",
+  "One tap": "One tap",
+  "Transaction Record": "Transaction Record",
+  "None": "None",
+  "Daily reports": "Daily reports",
+  "No": "No",
+  "Yes, after activation": "Yes, after activation",
+  "Error Risk": "Error Risk",
+  "High": "High",
+  "Lower": "Lower",
+  "Interface": "Interface",
+  "Complex codes": "Complex codes",
+  "Simple Arabic": "Simple Arabic",
   "Support": "Support",
-  "Networks": "Networks",
+  "Our team": "Our team",
   "One Year": "One Year",
   "Two Years": "Two Years",
   "Three Years": "Three Years",
   "year": "year",
   "2 years": "2 years",
   "3 years": "3 years",
-  "Technical Support": "Technical Support",
-  "All Updates": "All Updates",
-  "License for 1 Device": "License for 1 Device",
-  "All Features Included": "All Features Included",
-  "Save 16%": "Save 16%",
-  "Priority Support": "Priority Support",
-  "Save 37%": "Save 37%",
-  "Extended Warranty": "Extended Warranty",
-  "Manual Transfer": "Manual Transfer",
-  "Transfer Speed": "Transfer Speed",
-  "5-15 minutes": "5-15 minutes",
-  "Under 10 seconds": "Under 10 seconds",
-  "Ease of Use": "Ease of Use",
-  "Complex USSD codes": "Complex USSD codes",
-  "One tap transfer": "One tap transfer",
-  "Reliability": "Reliability",
-  "Often fails": "Often fails",
-  "99.9% success rate": "99.9% success rate",
-  "Offline Support": "Offline Support",
-  "No": "No",
-  "Yes (balance check)": "Yes (balance check)",
-  "Transaction History": "Transaction History",
-  "Full reports": "Full reports",
-  "Languages": "Languages",
-  "Arabic only": "Arabic only",
-  "Arabic & English": "Arabic & English",
-  "Dual SIM": "Dual SIM",
-  "Manual selection": "Manual selection",
-  "Auto selection": "Auto selection",
-  "24/7 priority": "24/7 priority",
-  "Memorize complex USSD codes for each network": "Memorize complex USSD codes for each network",
-  "Manual SIM switching on dual SIM devices": "Manual SIM switching on dual SIM devices",
-  "No transaction history or reports": "No transaction history or reports",
-  "Frequent failures and retries needed": "Frequent failures and retries needed",
-  "No customer support": "No customer support",
-  "Time-consuming process": "Time-consuming process",
-  "Free to download": "Free to download",
-  "Secure license system": "Secure license system",
+  "Ideal for new shops wanting to try Raseed at the lowest cost.": "Ideal for new shops wanting to try Raseed at the lowest cost.",
+  "The best balance between price and long-term value.": "The best balance between price and long-term value.",
+  "Perfect for established businesses looking for the best long-term investment.": "Perfect for established businesses looking for the best long-term investment.",
+  "All app features": "All app features",
+  "Free trial before buying": "Free trial before buying",
+  "Activation on one device": "Activation on one device",
+  "Updates all year": "Updates all year",
+  "Priority support": "Priority support",
+  "Updates for the full period": "Updates for the full period",
+  "Save 400 SYP": "Save 400 SYP",
+  "Save 600 SYP": "Save 600 SYP",
+  "Price locked for three years": "Price locked for three years",
+  "Free direct download": "Free direct download",
+  "Trial without payment": "Trial without payment",
   "No hidden fees": "No hidden fees",
-  "24/7 support": "24/7 support",
-  "Regular updates": "Regular updates",
-  "Works offline": "Works offline",
+  "Works offline after activation": "Works offline after activation",
+  "Activation by request from the app": "Activation by request from the app",
+  "Support for shops": "Support for shops",
   "Features": "Features",
   "Pricing": "Pricing",
   "Download": "Download",

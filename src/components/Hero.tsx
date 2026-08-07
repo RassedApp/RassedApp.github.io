@@ -121,7 +121,7 @@ export default function Hero({ apkLink }: HeroProps) {
                 transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
               >
                 <div className="text-3xl sm:text-4xl font-bold text-gray-900">
-                  {stat.value}
+                  {t(stat.value)}
                 </div>
                 <div className="text-sm text-gray-500 mt-1">
                   {t(stat.label)}
