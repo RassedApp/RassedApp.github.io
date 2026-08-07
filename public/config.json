@@ -3,16 +3,16 @@
   "app": {
     "name": "Quick USSD Dial",
     "company": "Blue Orbit Technologies",
-    "email": "support@blueorbit.tech",
-    "whatsapp": "https://wa.me/963999123456",
-    "telegram": "https://t.me/QuickUssdDial",
+    "email": "aslive@liva.com",
+    "whatsapp": "https://wa.me/963940716331",
+    "telegram": "https://t.me/Raseed",
     "copyrightYear": "2026",
     "apkLink": ""
   },
   "hero": {
     "stats": [
-      { "value": "50K+", "label": "Downloads" },
-      { "value": "4.9★", "label": "Rating" },
+      { "value": "1K+", "label": "Downloads" },
+      { "value": "4.6★", "label": "Rating" },
       { "value": "24/7", "label": "Support" },
       { "value": "2", "label": "Networks" }
     ]
@@ -22,7 +22,7 @@
     "plans": [
       {
         "name": "One Year",
-        "price": "120,000",
+        "price": "1200",
         "currency": "SYP",
         "period": "year",
         "features": [
@@ -36,7 +36,7 @@
       },
       {
         "name": "Two Years",
-        "price": "200,000",
+        "price": "2000",
         "currency": "SYP",
         "period": "2 years",
         "features": [
@@ -52,7 +52,7 @@
       },
       {
         "name": "Three Years",
-        "price": "300,000",
+        "price": "3000",
         "currency": "SYP",
         "period": "3 years",
         "features": [
@@ -81,7 +81,7 @@
       "Time-consuming process"
     ],
     "items": [
-      { "label": "Transfer Speed", "manual": "5-15 minutes", "app": "Under 10 seconds" },
+      { "label": "Transfer Speed", "manual": "2 minutes", "app": "Under 10 seconds" },
       { "label": "Ease of Use", "manual": "Complex USSD codes", "app": "One tap transfer" },
       { "label": "Reliability", "manual": "Often fails", "app": "99.9% success rate" },
       { "label": "Offline Support", "manual": "No", "app": "Yes (balance check)" },
