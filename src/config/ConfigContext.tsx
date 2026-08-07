@@ -6,7 +6,7 @@ import type { SiteConfig } from './defaults'
 const ConfigContext = createContext<SiteConfig>(defaultConfig)
 
 const CONFIG_SOURCES = [
-  'https://raw.githubusercontent.com/Rassed-Tech/Rassed-Tech.github.io/master/public/config.json',
+  'https://raw.githubusercontent.com/RassedApp/RassedApp.github.io/master/public/config.json',
   `${import.meta.env.BASE_URL}config.json`,
 ]
 
