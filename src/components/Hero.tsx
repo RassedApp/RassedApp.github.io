@@ -3,18 +3,15 @@
 import { motion } from 'framer-motion'
 import { Download, Zap, ArrowRight } from 'lucide-react'
 import Link from './Link'
+import { useConfig } from '../config/ConfigContext'
 
 interface HeroProps {
   apkLink: string
 }
 
 export default function Hero({ apkLink }: HeroProps) {
-  const stats = [
-    { value: '50K+', label: 'Downloads' },
-    { value: '4.9★', label: 'Rating' },
-    { value: '24/7', label: 'Support' },
-    { value: '2', label: 'Networks' },
-  ]
+  const config = useConfig()
+  const stats = config.hero.stats
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50">

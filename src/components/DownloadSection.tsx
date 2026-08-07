@@ -2,20 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { Download, Smartphone, ArrowRight, Check } from 'lucide-react'
+import { useConfig } from '../config/ConfigContext'
 
 interface DownloadSectionProps {
   apkLink: string
 }
 
 export default function DownloadSection({ apkLink }: DownloadSectionProps) {
-  const features = [
-    'Free to download',
-    'Secure license system',
-    'No hidden fees',
-    '24/7 support',
-    'Regular updates',
-    'Works offline',
-  ]
+  const config = useConfig()
+  const features = config.download.features
 
   return (
     <section id="download" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-emerald-50">

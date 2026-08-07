@@ -3,8 +3,12 @@
 import { motion } from 'framer-motion'
 import { Heart, Mail, MessageCircle, Send, Smartphone } from 'lucide-react'
 import Link from './Link'
+import { useConfig } from '../config/ConfigContext'
 
 export default function Footer() {
+  const config = useConfig()
+  const app = config.app
+
   const footerLinks = {
     product: [
       { label: 'Features', href: '#features' },
@@ -27,9 +31,9 @@ export default function Footer() {
   }
 
   const socialLinks = [
-    { icon: Mail, href: 'mailto:support@blueorbit.tech', label: 'Email' },
-    { icon: MessageCircle, href: 'https://wa.me/963999123456', label: 'WhatsApp' },
-    { icon: Send, href: 'https://t.me/QuickUssdDial', label: 'Telegram' },
+    { icon: Mail, href: `mailto:${app.email}`, label: 'Email' },
+    { icon: MessageCircle, href: app.whatsapp, label: 'WhatsApp' },
+    { icon: Send, href: app.telegram, label: 'Telegram' },
   ]
 
   return (
@@ -41,10 +45,10 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center">
                 <Smartphone className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Quick USSD Dial</span>
+              <span className="text-xl font-bold text-gray-900">{app.name}</span>
             </Link>
             <p className="text-gray-600 text-sm max-w-sm leading-relaxed mb-6">
-              The fastest and easiest way to transfer balance between MTN and Syriatel networks. Built by Blue Orbit Technologies.
+              The fastest and easiest way to transfer balance between MTN and Syriatel networks. Built by {app.company}.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, i) => (
@@ -108,7 +112,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <motion.p className="text-xs text-gray-500" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            © 2026 Blue Orbit Technologies. All rights reserved.
+            © {app.copyrightYear} {app.company}. All rights reserved.
           </motion.p>
           <motion.p className="text-xs text-gray-500 flex items-center gap-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
             Made with

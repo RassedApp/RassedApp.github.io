@@ -2,58 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
-
-const pricing = [
-  {
-    name: 'One Year',
-    price: '120,000',
-    currency: 'SYP',
-    period: 'year',
-    features: [
-      'Technical Support',
-      'All Updates',
-      'License for 1 Device',
-      'All Features Included',
-    ],
-    popular: false,
-    bestValue: false,
-  },
-  {
-    name: 'Two Years',
-    price: '200,000',
-    currency: 'SYP',
-    period: '2 years',
-    features: [
-      'Technical Support',
-      'All Updates',
-      'License for 1 Device',
-      'All Features Included',
-      'Save 16%',
-      'Priority Support',
-    ],
-    popular: true,
-    bestValue: false,
-  },
-  {
-    name: 'Three Years',
-    price: '300,000',
-    currency: 'SYP',
-    period: '3 years',
-    features: [
-      'Technical Support',
-      'All Updates',
-      'License for 1 Device',
-      'All Features Included',
-      'Save 37%',
-      'Priority Support',
-      'Extended Warranty',
-    ],
-    popular: false,
-    bestValue: true,
-  },
-]
+import { useConfig } from '../config/ConfigContext'
 
 export default function Pricing() {
+  const config = useConfig()
+  const pricing = config.pricing.plans
   return (
     <section id="pricing" className="py-20 sm:py-24 lg:py-32 bg-white">
       <div className="container-custom">

@@ -9,15 +9,20 @@ import FAQ from './components/FAQ'
 import DownloadSection from './components/DownloadSection'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import { useConfig } from './config/ConfigContext'
+import { apkUrl } from './lib/media'
 
-const APK_DOWNLOAD_LINK = 'YOUR_APK_DOWNLOAD_LINK'
+const FALLBACK_APK_LINK = 'YOUR_APK_DOWNLOAD_LINK'
 
 function App() {
+  const config = useConfig()
+  const apkLink = config.app.apkLink || apkUrl || FALLBACK_APK_LINK
+
   return (
     <div className="min-h-screen bg-white">
-      <Navbar apkLink={APK_DOWNLOAD_LINK} />
+      <Navbar apkLink={apkLink} />
       <main>
-        <Hero apkLink={APK_DOWNLOAD_LINK} />
+        <Hero apkLink={apkLink} />
         <Features />
         <HowItWorks />
         <Screenshots />
@@ -25,7 +30,7 @@ function App() {
         <Pricing />
         <Testimonials />
         <FAQ />
-        <DownloadSection apkLink={APK_DOWNLOAD_LINK} />
+        <DownloadSection apkLink={apkLink} />
       </main>
       <Footer />
     </div>

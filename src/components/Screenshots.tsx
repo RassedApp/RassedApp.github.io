@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { Smartphone, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
+import { screenshots as uploadedScreenshots } from '../lib/media'
 
-const screenshots = [
+const placeholderScreenshots = [
   { 
     label: 'Home Screen', 
     color: 'from-primary-100 to-primary-50',
@@ -26,6 +27,23 @@ const screenshots = [
     features: ['License', 'Language', 'Theme']
   },
 ]
+
+interface Slide {
+  url?: string
+  label: string
+  color: string
+  features: string[]
+}
+
+const screenshots: Slide[] =
+  uploadedScreenshots.length > 0
+    ? uploadedScreenshots.map((ss) => ({
+        url: ss.url,
+        label: ss.label,
+        color: '',
+        features: [],
+      }))
+    : placeholderScreenshots
 
 export default function Screenshots() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -67,21 +85,31 @@ export default function Screenshots() {
                     >
                       <div className="relative w-full max-w-sm mx-auto">
                         <div className="relative w-full h-[480px] rounded-[3rem] border-4 border-gray-200 bg-gradient-to-b from-white to-gray-50 p-3 shadow-2xl group-hover:shadow-primary-100 transition-shadow duration-500 group-hover:-translate-y-2">
-                          <div className={`w-full h-full rounded-[2rem] bg-gradient-to-br ${ss.color} flex items-center justify-center overflow-hidden relative`}>
-                            <div className="text-center space-y-3 p-6 z-10">
-                              <div className="w-16 h-16 rounded-2xl bg-primary-100 mx-auto flex items-center justify-center">
-                                <Smartphone className="w-8 h-8 text-primary-600" />
-                              </div>
-                              <p className="text-sm font-medium text-gray-800">
-                                {ss.label}
-                              </p>
-                              <div className="space-y-2 mt-4 flex flex-col items-center">
-                                {ss.features.map((_, idx) => (
-                                  <div key={idx} className="h-2 w-20 rounded-full bg-primary-200" />
-                                ))}
+                          {ss.url ? (
+                            <div className="w-full h-full rounded-[2rem] overflow-hidden relative">
+                              <img
+                                src={ss.url}
+                                alt={ss.label}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ) : (
+                            <div className={`w-full h-full rounded-[2rem] bg-gradient-to-br ${ss.color} flex items-center justify-center overflow-hidden relative`}>
+                              <div className="text-center space-y-3 p-6 z-10">
+                                <div className="w-16 h-16 rounded-2xl bg-primary-100 mx-auto flex items-center justify-center">
+                                  <Smartphone className="w-8 h-8 text-primary-600" />
+                                </div>
+                                <p className="text-sm font-medium text-gray-800">
+                                  {ss.label}
+                                </p>
+                                <div className="space-y-2 mt-4 flex flex-col items-center">
+                                  {ss.features.map((_, idx) => (
+                                    <div key={idx} className="h-2 w-20 rounded-full bg-primary-200" />
+                                  ))}
+                                </div>
                               </div>
                             </div>
-                          </div>
+                          )}
                           <div className="absolute top-6 left-1/2 -translate-x-1/2 w-20 h-1 bg-gray-300 rounded-full" />
                           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-gray-200 rounded-full" />
                         </div>

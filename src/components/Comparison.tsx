@@ -2,28 +2,17 @@
 
 import { motion } from 'framer-motion'
 import { Zap, Shield, CheckCircle, Globe, BarChart3, XCircle } from 'lucide-react'
+import { useConfig } from '../config/ConfigContext'
 
-const comparisonItems = [
-  { label: 'Transfer Speed', manual: '5-15 minutes', app: 'Under 10 seconds', icon: Zap, winner: 'app' },
-  { label: 'Ease of Use', manual: 'Complex USSD codes', app: 'One tap transfer', icon: Shield, winner: 'app' },
-  { label: 'Reliability', manual: 'Often fails', app: '99.9% success rate', icon: Shield, winner: 'app' },
-  { label: 'Offline Support', manual: 'No', app: 'Yes (balance check)', icon: Globe, winner: 'app' },
-  { label: 'Transaction History', manual: 'No', app: 'Full reports', icon: BarChart3, winner: 'app' },
-  { label: 'Languages', manual: 'Arabic only', app: 'Arabic & English', icon: Globe, winner: 'app' },
-  { label: 'Dual SIM', manual: 'Manual selection', app: 'Auto selection', icon: Zap, winner: 'app' },
-  { label: 'Support', manual: 'None', app: '24/7 priority', icon: Shield, winner: 'app' },
-]
-
-const manualCons = [
-  'Memorize complex USSD codes for each network',
-  'Manual SIM switching on dual SIM devices',
-  'No transaction history or reports',
-  'Frequent failures and retries needed',
-  'No customer support',
-  'Time-consuming process',
-]
+const itemIcons = [Zap, Shield, Shield, Globe, BarChart3, Globe, Zap, Shield]
 
 export default function Comparison() {
+  const config = useConfig()
+  const comparisonItems = config.comparison.items.map((item, i) => ({
+    ...item,
+    icon: itemIcons[i] ?? Zap,
+  }))
+  const manualCons = config.comparison.manualCons
   return (
     <section className="py-20 sm:py-24 lg:py-32 bg-gray-50">
       <div className="container-custom">
@@ -52,7 +41,7 @@ export default function Comparison() {
               <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
                 <XCircle className="w-6 h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Manual Transfer</h3>
+              <h3 className="text-xl font-bold text-gray-900">{config.comparison.manualTitle}</h3>
             </div>
             <ul className="space-y-4">
               {manualCons.map((con, i) => (
@@ -82,7 +71,7 @@ export default function Comparison() {
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
                 <CheckCircle className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold">Quick USSD Dial</h3>
+              <h3 className="text-xl font-bold">{config.comparison.appTitle}</h3>
             </div>
             <ul className="space-y-4">
               {comparisonItems.map((item, i) => (
