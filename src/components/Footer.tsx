@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Heart, Mail, MessageCircle, Send, Smartphone } from 'lucide-react'
+import { Heart, Mail, MessageCircle, Smartphone, Facebook } from 'lucide-react'
 import Link from './Link'
 import { useConfig } from '../config/ConfigContext'
 
@@ -19,29 +19,22 @@ export default function Footer() {
       { label: t('FAQ'), href: '#faq' },
     ],
     company: [
-      { label: t('About'), href: '#' },
+      { label: t('About'), href: '#about' },
       { label: t('Contact'), href: '#contact' },
-      { label: t('Privacy Policy'), href: '#' },
-      { label: t('Terms of Service'), href: '#' },
-    ],
-    support: [
-      { label: t('Help Center'), href: '#' },
-      { label: t('Documentation'), href: '#' },
-      { label: t('License'), href: '#' },
-      { label: t('Updates'), href: '#' },
+      { label: t('Privacy Policy'), href: '/privacy' },
     ],
   }
 
   const socialLinks = [
     { icon: Mail, href: `mailto:${app.email}`, label: t('Email') },
     { icon: MessageCircle, href: app.whatsapp, label: t('WhatsApp') },
-    { icon: Send, href: app.telegram, label: t('Telegram') },
+    { icon: Facebook, href: 'https://www.facebook.com/RaseedApp', label: t('Facebook') },
   ]
 
   return (
     <footer className="border-t border-gray-200 bg-gray-50">
       <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <motion.div className="lg:col-span-2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center">
@@ -89,19 +82,6 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-900 mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               {footerLinks.company.map((link, i) => (
-                <li key={i}>
-                  <Link to={link.href} className="hover:text-primary-600 transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-            <h4 className="font-semibold text-gray-900 mb-4">{t('footer.support')}</h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              {footerLinks.support.map((link, i) => (
                 <li key={i}>
                   <Link to={link.href} className="hover:text-primary-600 transition-colors">
                     {link.label}

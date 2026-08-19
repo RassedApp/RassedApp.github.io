@@ -1,3 +1,4 @@
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
@@ -11,20 +12,20 @@ import FAQ from './components/FAQ'
 import DownloadSection from './components/DownloadSection'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import About from './components/About'
+import PrivacyPolicy from './components/PrivacyPolicy'
 import { useConfig } from './config/ConfigContext'
 import { apkUrl } from './lib/media'
 
 const FALLBACK_APK_LINK = 'YOUR_APK_DOWNLOAD_LINK'
 
-function App() {
-  const config = useConfig()
-  const apkLink = config.app.apkLink || apkUrl || FALLBACK_APK_LINK
-
+function LandingPage({ apkLink }: { apkLink: string }) {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Navbar apkLink={apkLink} />
       <main>
         <Hero apkLink={apkLink} />
+        <About />
         <Features />
         <HowItWorks />
         <Screenshots />
@@ -37,7 +38,23 @@ function App() {
         <DownloadSection apkLink={apkLink} />
       </main>
       <Footer />
-    </div>
+    </>
+  )
+}
+
+function App() {
+  const config = useConfig()
+  const apkLink = config.app.apkLink || apkUrl || FALLBACK_APK_LINK
+
+  return (
+    <HashRouter>
+      <div className="min-h-screen bg-white">
+        <Routes>
+          <Route path="/" element={<LandingPage apkLink={apkLink} />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+        </Routes>
+      </div>
+    </HashRouter>
   )
 }
 

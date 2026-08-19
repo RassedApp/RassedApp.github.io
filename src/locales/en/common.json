@@ -91,6 +91,40 @@
       { "title": "Simple Arabic Interface", "description": "Built so your whole shop can use it without a learning curve." }
     ]
   },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Raseed (Quick USSD Dial) is designed to facilitate USSD balance transfers for users of supported mobile networks in Syria. It focuses on speed, simplicity, and ease of use, and works on Android with dual SIM support.",
+    "items": {
+      "app": {
+        "title": "Raseed - Quick USSD Dial App",
+        "desc": "A specialized Android app for managing daily balance transfers for mobile recharge shops in Syria."
+      },
+      "speed": {
+        "title": "Speed & Simplicity",
+        "desc": "Transfer balance with one tap instead of typing USSD codes every time."
+      },
+      "security": {
+        "title": "Security & Licensing",
+        "desc": "Secure activation, device-bound license, works offline after activation."
+      },
+      "team": {
+        "title": "Development Team",
+        "desc": "The product is developed by Blue Orbit Technologies."
+      },
+      "syria": {
+        "title": "Built for Syria",
+        "desc": "Supports both Syriatel and MTN networks, designed for the Syrian market."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "desc": "After activation, the app works fully without an internet connection."
+      }
+    },
+    "developer": {
+      "title": "Developed by Blue Orbit Technologies",
+      "desc": "We build technology solutions serving the Syrian market, with a focus on quality, simplicity, and continuous customer support."
+    }
+  },
   "betterDay": {
     "title": "A Better Working Day",
     "p1": "It's peak hour and the shop can barely keep up. One customer needs a transfer, another asks for a balance check, and the phone won't stop ringing. In the middle of it all, you still have to type codes carefully, switch SIM cards, and hope nothing went wrong.",
@@ -243,19 +277,133 @@
   "Pricing": "Pricing",
   "Download": "Download",
   "FAQ": "FAQ",
-  "About": "About",
-  "Contact": "Contact",
-  "Privacy Policy": "Privacy Policy",
-  "Terms of Service": "Terms of Service",
-  "Help Center": "Help Center",
-  "Documentation": "Documentation",
-  "License": "License",
-  "Updates": "Updates",
+"About": "About",
+"Contact": "Contact",
+"Privacy Policy": "Privacy Policy",
+"Help Center": "Help Center",
+"Documentation": "Documentation",
+"License": "License",
+"Updates": "Updates",
   "Email": "Email",
   "WhatsApp": "WhatsApp",
   "Telegram": "Telegram",
-  "Home Screen": "Home Screen",
-  "Transfer": "Transfer",
-  "Reports": "Reports",
-  "Settings": "Settings"
+"Home Screen": "Home Screen",
+"Transfer": "Transfer",
+"Reports": "Reports",
+"Settings": "Settings",
+"privacy": {
+  "backToHome": "Back to Home",
+  "title": "Privacy Policy",
+  "subtitle": "How {{app}} Handles Your Data",
+  "lastUpdated": "Last Updated",
+  "sections": {
+    "intro": {
+      "title": "Introduction",
+      "content": "{{app}}, developed by {{company}}, is designed to facilitate USSD balance transfers for users of supported mobile networks in Syria (Syriatel and MTN). This Privacy Policy explains what data we collect, how we use it, and your rights regarding it. We are committed to protecting your privacy and handling your data with transparency and security."
+    },
+    "dataCollected": {
+      "title": "Data We Collect",
+      "intro": "The app collects the following data only when necessary for core functionality:",
+      "items": {
+        "account": "Account and authentication data: When you create an account or log in, we collect username and encrypted password for authentication purposes only.",
+        "phoneNumber": "Phone number: Entered manually by you when using balance transfer functions, used only to complete the USSD transfer.",
+        "deviceId": "Device ID: Used to bind the license to a specific device, and for security and unauthorized use prevention.",
+        "license": "License and activation data: License status (trial/activated), activation date, license duration, and licensed device information.",
+        "transactions": "Transfer and transaction data: Details of each transfer (number, amount, network, date, status) stored locally on your device for daily reports and transfer history.",
+        "contacts": "Contacts: If you choose to use the beneficiary saving feature, names and numbers are stored locally on your device only to facilitate future transfers.",
+        "sync": "Supabase sync data: When you enable sync (optional), an encrypted copy of license and transaction data is sent to Supabase servers for backup and data restoration on another device.",
+        "errors": "Error and usage logs: When a technical error occurs, error type, time, and basic device info (app version, Android version) may be logged locally only to help us fix issues."
+      }
+    },
+    "usage": {
+      "title": "How We Use Your Data",
+      "intro": "We use the data we collect only for the following purposes:",
+      "items": {
+        "provide": "Provide core app functionality: balance transfers, balance inquiry, daily reports, and transfer history.",
+        "activate": "Manage licensing and activation: verify license validity, bind license to device, and process activation requests.",
+        "sync": "Backup sync (optional): When you enable sync, your data is backed up to Supabase for later restoration.",
+        "support": "Provide technical support: When you contact us, we may use your account and device info to assist you better.",
+        "improve": "Improve the app: Analyze technical errors (non-personal) to fix bugs and improve performance.",
+        "compliance": "Legal compliance: When necessary to comply with applicable laws or competent authority requests."
+      }
+    },
+    "storage": {
+      "title": "Local Storage and Offline-First Approach",
+      "content": "{{app}} follows an \"Offline-first\" approach — all your core data (account, transfers, beneficiaries, license) is stored first and foremost locally on your device using an encrypted SQLite database. This means the app works fully without an internet connection in your daily work after activation. Data is not automatically sent to any server unless you manually enable the sync option."
+    },
+    "sync": {
+      "title": "Sync and Backend Services",
+      "content": "The app uses Supabase as a backend service for the following purposes only:",
+      "items": {
+        "supabase": "Supabase (hosted PostgreSQL database): Used to store encrypted license data, activation requests, and encrypted backup of transaction data (when sync is enabled optionally). Sensitive data is encrypted before transmission.",
+        "activation": "Activation request processing: When you send an activation request from within the app, device and license data are sent to the admin server for manual approval.",
+        "optional": "Sync is entirely optional: You can use the app fully without enabling sync. Your data stays on your device only unless you choose otherwise."
+      }
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "We take the following measures to protect your data:",
+      "items": {
+        "local": "Local encryption: Local database is encrypted using SQLCipher. Passwords are not stored in plain text.",
+        "transport": "Secure transport: All communications with servers use HTTPS/TLS.",
+        "access": "Access control: License data is bound to one device. Data cannot be accessed from another device without authentication.",
+        "retention": "Minimal retention: We do not retain personal data on servers longer than necessary for the purposes described above."
+      }
+    },
+    "thirdParty": {
+      "title": "Third-Party Data Sharing",
+      "intro": "We do not sell your personal data to any third party. We share data only with the following services and only to the minimum extent necessary:",
+      "items": {
+        "supabase": "Backend service provider (database, auth, storage). Data is processed per Supabase's Privacy Policy.",
+        "googlePlay": "Google Play Services: For distribution, updates, and license management via the Play Store. See Google's Privacy Policy.",
+        "carrierDesc": "Mobile carriers (Syriatel, MTN): When performing a USSD transfer, the transfer code is sent via the carrier's network. We do not share your personal data with carriers."
+      },
+      "noSale": "We confirm that we do not sell, rent, or exchange your personal data with advertisers or data brokers."
+    },
+    "deviceLicense": {
+      "title": "Device, License, and Activation Data",
+      "content": "Each license is bound to one device identified by a unique Device ID. Upon activation, the device is registered in the licensing system. Transferring a license to another device requires contacting support and deactivating the old device. Device data is used only for licensing and security purposes."
+    },
+    "contacts": {
+      "title": "Contacts",
+      "content": "The beneficiary saving feature (names and numbers) is entirely optional. If used, data is stored locally on your device only in the encrypted database. Contacts are not uploaded to any server unless you manually enable sync, in which case they are included in the encrypted backup."
+    },
+    "retention": {
+      "title": "Data Retention and Deletion",
+      "content": "We retain your data as follows:",
+      "items": {
+        "local": "Local data: Remains on your device until you uninstall the app or clear app data from device settings.",
+        "server": "Server data (Supabase): License data and backups are retained for the license duration plus one additional year after expiry, then automatically deleted.",
+        "deletion": "You can request deletion of your server data at any time by contacting us. Uninstalling the app from your device removes all local data immediately."
+      }
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "Under general data protection principles, you have the following rights:",
+      "items": {
+        "access": "Access: Request a copy of the data we hold about you.",
+        "correction": "Correction: Request correction of any inaccurate data.",
+        "deletion": "Deletion: Request deletion of your data (subject to legal license record retention obligations).",
+        "portability": "Portability: Receive your data in a machine-readable format.",
+        "objection": "Objection: Object to certain processing of your data.",
+        "withdrawal": "Withdrawal: Withdraw consent for sync or any optional processing at any time."
+      }
+    },
+    "children": {
+      "title": "Children and Minors",
+      "content": "{{app}} is designed for commercial use by shop owners and point-of-sale staff (ages 18+). We do not target children under 18, nor do we knowingly collect their data. If we become aware of collecting a minor's data, we will delete it immediately."
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "content": "We may update this policy from time to time to reflect changes in our practices or legal requirements. The \"Last Updated\" date at the top of the page will be updated.",
+      "notification": "If changes are material, we will notify you via an in-app notification or through your registered contact information."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "For any questions about this Privacy Policy or your data:",
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook"
+    }
+  }
+}
 }

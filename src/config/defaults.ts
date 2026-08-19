@@ -26,7 +26,7 @@ export interface SiteConfig {
     company: string
     email: string
     whatsapp: string
-    telegram: string
+    facebook: string
     copyrightYear: string
     apkLink: string
   }
@@ -52,9 +52,9 @@ export const defaultConfig: SiteConfig = {
   app: {
     name: 'Raseed',
     company: 'Blue Orbit Technologies',
-    email: 'aslive@liva.com',
+    email: 'aslive@live.com',
     whatsapp: 'https://wa.me/963940716331',
-    telegram: 'https://t.me/BoTechRaseed',
+    facebook: 'https://www.facebook.com/RaseedApp',
     copyrightYear: '2026',
     apkLink: '',
   },
