@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
@@ -47,14 +47,14 @@ function App() {
   const apkLink = config.app.apkLink || apkUrl || FALLBACK_APK_LINK
 
   return (
-    <HashRouter>
+    <BrowserRouter basename="/">
       <div className="min-h-screen bg-white">
         <Routes>
           <Route path="/" element={<LandingPage apkLink={apkLink} />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

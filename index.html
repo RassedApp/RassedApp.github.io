@@ -42,6 +42,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          var path = redirect;
+          if (path.startsWith('/')) path = path.slice(1);
+          window.history.replaceState(null, null, '/' + path);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
