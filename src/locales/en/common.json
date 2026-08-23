@@ -310,9 +310,20 @@
         "deviceId": "Device ID: Used to bind the license to a specific device, and for security and unauthorized use prevention.",
         "license": "License and activation data: License status (trial/activated), activation date, license duration, and licensed device information.",
         "transactions": "Transfer and transaction data: Details of each transfer (number, amount, network, date, status) stored locally on your device for daily reports and transfer history.",
-        "contacts": "Contacts: If you choose to use the beneficiary saving feature, names and numbers are stored locally on your device only to facilitate future transfers.",
+        "contacts": "Contacts: Only with your consent and at your request, the app can read a beneficiary's name and number from your device's address book when you pick a recipient, or save a beneficiary to your address book when you ask it to. The app never reads your full contact list in the background, and no contact is uploaded to any server unless you manually enable optional sync.",
         "sync": "Supabase sync data: When you enable sync (optional), an encrypted copy of license and transaction data is sent to Supabase servers for backup and data restoration on another device.",
         "errors": "Error and usage logs: When a technical error occurs, error type, time, and basic device info (app version, Android version) may be logged locally only to help us fix issues."
+      }
+    },
+    "permissions": {
+      "title": "App Permissions",
+      "intro": "The app requests only the following Android permissions, each tied strictly to a core function:",
+      "items": {
+        "callPhone": "Phone (CALL_PHONE): Required to start USSD sessions through your phone's dialer when you initiate a transfer or balance inquiry. The app never places voice calls and never accesses your calls.",
+        "contacts": "Contacts (READ_CONTACTS / WRITE_CONTACTS): Used only when you act inside the app, to pick a beneficiary's number from your address book or to save a beneficiary to it.",
+        "camera": "Camera (CAMERA): Used solely to scan a QR code to pair the customer display screen with your device. No photos or video are captured, stored, or transmitted.",
+        "notifications": "Notifications (POST_NOTIFICATIONS): Used to show transfer status and activation/update notifications.",
+        "network": "Network (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE, CHANGE_WIFI_STATE, CHANGE_NETWORK_STATE): Used for activation, optional sync, and connecting the customer display screen over a local Wi-Fi network."
       }
     },
     "usage": {
@@ -355,18 +366,25 @@
       "intro": "We do not sell your personal data to any third party. We share data only with the following services and only to the minimum extent necessary:",
       "items": {
         "supabase": "Backend service provider (database, auth, storage). Data is processed per Supabase's Privacy Policy.",
-        "googlePlay": "Google Play Services: For distribution, updates, and license management via the Play Store. See Google's Privacy Policy.",
-        "carrierDesc": "Mobile carriers (Syriatel, MTN): When performing a USSD transfer, the transfer code is sent via the carrier's network. We do not share your personal data with carriers."
+        "googlePlay": "Google Play Services",
+        "googlePlayDesc": "Used for app distribution and updates when the app is installed via the Play Store. See Google's Privacy Policy for details.",
+        "carrier": "Mobile Carriers (Syriatel, MTN)",
+        "carrierDesc": "When you perform a USSD transfer or balance inquiry, your phone sends the operation code to your carrier's network — exactly as it would if you typed the code manually. We do not share your personal data with carriers."
       },
       "noSale": "We confirm that we do not sell, rent, or exchange your personal data with advertisers or data brokers."
     },
     "deviceLicense": {
       "title": "Device, License, and Activation Data",
-      "content": "Each license is bound to one device identified by a unique Device ID. Upon activation, the device is registered in the licensing system. Transferring a license to another device requires contacting support and deactivating the old device. Device data is used only for licensing and security purposes."
+      "content": "Each license is bound to one device identified by a unique Device ID. Upon activation, the device is registered in the licensing system. Transferring a license to another device requires contacting support and deactivating the old device. Device data is used only for licensing and security purposes.",
+      "items": {
+        "deviceBinding": "Device binding: Each license is bound to a single device identified by its unique Device ID.",
+        "activation": "Registration on activation: After an activation request is approved, the device is registered in the licensing system.",
+        "transfer": "License transfer: Moving a license to another device requires contacting support and deactivating the old device first."
+      }
     },
     "contacts": {
       "title": "Contacts",
-      "content": "The beneficiary saving feature (names and numbers) is entirely optional. If used, data is stored locally on your device only in the encrypted database. Contacts are not uploaded to any server unless you manually enable sync, in which case they are included in the encrypted backup."
+      "content": "The beneficiary feature is entirely optional. At your request, the app can pick a number from your device's address book or save beneficiaries into it; otherwise, beneficiary details are kept only in the encrypted local database. Contacts are not uploaded to any server unless you manually enable sync, in which case they are included in the encrypted backup."
     },
     "retention": {
       "title": "Data Retention and Deletion",
@@ -374,7 +392,7 @@
       "items": {
         "local": "Local data: Remains on your device until you uninstall the app or clear app data from device settings.",
         "server": "Server data (Supabase): License data and backups are retained for the license duration plus one additional year after expiry, then automatically deleted.",
-        "deletion": "You can request deletion of your server data at any time by contacting us. Uninstalling the app from your device removes all local data immediately."
+        "deletion": "You can request deletion of your account and server data at any time through the contact channels listed in the \"Contact Us\" section below (email or WhatsApp); we process such requests within 30 days at most. Uninstalling the app from your device also removes all local data immediately."
       }
     },
     "rights": {
@@ -383,7 +401,7 @@
       "items": {
         "access": "Access: Request a copy of the data we hold about you.",
         "correction": "Correction: Request correction of any inaccurate data.",
-        "deletion": "Deletion: Request deletion of your data (subject to legal license record retention obligations).",
+        "deletion": "Deletion: Request deletion of your account and server data via the contact channels below (subject to legal license record retention obligations).",
         "portability": "Portability: Receive your data in a machine-readable format.",
         "objection": "Objection: Object to certain processing of your data.",
         "withdrawal": "Withdrawal: Withdraw consent for sync or any optional processing at any time."

@@ -97,6 +97,23 @@ export default function PrivacyPolicy() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <Lock className="w-5 h-5 text-primary-600" />
+                    {t('privacy.sections.permissions.title')}
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {t('privacy.sections.permissions.intro')}
+                  </p>
+                  <ul className="space-y-3 list-disc list-inside text-gray-600">
+                    <li>{t('privacy.sections.permissions.items.callPhone')}</li>
+                    <li>{t('privacy.sections.permissions.items.contacts')}</li>
+                    <li>{t('privacy.sections.permissions.items.camera')}</li>
+                    <li>{t('privacy.sections.permissions.items.notifications')}</li>
+                    <li>{t('privacy.sections.permissions.items.network')}</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <Smartphone className="w-5 h-5 text-primary-600" />
                     {t('privacy.sections.usage.title')}
                   </h2>
