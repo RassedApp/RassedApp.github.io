@@ -16,7 +16,7 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import { useConfig } from './config/ConfigContext'
-import { apkUrl, fetchLatestReleaseApk } from './lib/media'
+import { fetchLatestReleaseApk } from './lib/media'
 
 const FALLBACK_APK_LINK = 'https://github.com/mobi1298-del/ussd/releases/latest'
 
@@ -50,10 +50,6 @@ function App() {
   useEffect(() => {
     if (config.app.apkLink) {
       setApkLink(config.app.apkLink)
-      return
-    }
-    if (apkUrl) {
-      setApkLink(apkUrl)
       return
     }
     fetchLatestReleaseApk().then((url) => {
