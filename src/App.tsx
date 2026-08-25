@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -15,9 +16,9 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import { useConfig } from './config/ConfigContext'
-import { apkUrl } from './lib/media'
+import { apkUrl, fetchLatestReleaseApk } from './lib/media'
 
-const FALLBACK_APK_LINK = 'YOUR_APK_DOWNLOAD_LINK'
+const FALLBACK_APK_LINK = 'https://github.com/mobi1298-del/ussd/releases/latest'
 
 function LandingPage({ apkLink }: { apkLink: string }) {
   return (
@@ -44,7 +45,21 @@ function LandingPage({ apkLink }: { apkLink: string }) {
 
 function App() {
   const config = useConfig()
-  const apkLink = config.app.apkLink || apkUrl || FALLBACK_APK_LINK
+  const [apkLink, setApkLink] = useState(FALLBACK_APK_LINK)
+
+  useEffect(() => {
+    if (config.app.apkLink) {
+      setApkLink(config.app.apkLink)
+      return
+    }
+    if (apkUrl) {
+      setApkLink(apkUrl)
+      return
+    }
+    fetchLatestReleaseApk().then((url) => {
+      if (url) setApkLink(url)
+    })
+  }, [config])
 
   return (
     <BrowserRouter basename="/">
